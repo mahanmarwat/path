@@ -1,3 +1,5 @@
+import os.path
+
 from setuptools import setup
 from path import __version__
 
@@ -9,7 +11,8 @@ setup(name='path',
       download_url='',
       license='MIT',
       description='Intelligent Path Module for Pretty People',
-      long_description=open('./README.rst').read(),
+      long_description=open(os.path.join(
+          os.path.dirname(__file__), 'README.rst')).read(),
       keywords='os path unipath pathlib http url',
       py_modules=['path'],
       classifiers=[
