@@ -48,7 +48,7 @@ Features
 Installation
 ------------
 
-    $ pip install https://github.com/mahanmarwat/path
+    $ pip install https://github.com/mahanmarwat/path/archive/master.zip
 
 Documentation
 -------------
