@@ -11,8 +11,7 @@ setup(name='path',
       download_url='',
       license='MIT',
       description='Intelligent Path Module for Pretty People',
-      long_description=open(os.path.join(
-          os.path.dirname(__file__), 'README.md')).read(),
+      long_description=open('README.rst').read(),
       keywords='os path unipath pathlib http url',
       py_modules=['path'],
       classifiers=[
