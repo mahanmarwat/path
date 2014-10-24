@@ -54,7 +54,7 @@ Documentation
 -------------
 
 Under development.
-Check `path.py` which is self explanatory.
+Check ``path.py`` which is self explanatory.
 
 Contribute
 ----------
