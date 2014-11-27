@@ -1,6 +1,11 @@
 Path: Path for Pretty People
 ============================
 
+.. image:: https://readthedocs.org/projects/path/badge/?version=latest
+  :target: https://readthedocs.org/projects/path/?badge=latest
+  :alt: Documentation Status
+
+
 Path provide highly **readable** API to access and manipulate both filesystem path and URL path.
 
 All operations are available at module level as functions.
