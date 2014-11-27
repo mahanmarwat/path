@@ -2,8 +2,9 @@
 Path: Path for Pretty People
 ============================
 
-path provide highly **readable** API for OS path manipulation and accessing filesystem. All operations are
-available at module level as functions.
+Path provide highly **readable** API to access and manipulate both filesystem path and URL path.
+
+All operations are available at module level as functions.
 
     >>> import path
     >>> path.cwd() # return current working directory.

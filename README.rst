@@ -54,7 +54,8 @@ Installation
 Documentation
 -------------
 
-Under development.
+http://path.readthedocs.org
+
 Check ``path.py`` which is self explanatory.
 
 Contribute

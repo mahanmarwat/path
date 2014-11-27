@@ -99,12 +99,103 @@
   <div class="section" id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="constants">
-<h2>Constants:<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span><span class="o">.</span><span class="n">CURDIR</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span><span class="o">.</span><span class="n">PARDIR</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span><span class="o">.</span><span class="n">SEP</span>
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="properties-constants">
+<h3>Properties constants:<a class="headerlink" href="#properties-constants" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">SIZE</span>  <span class="o">=</span> <span class="mi">6</span> <span class="c"># stat.ST_SIZE</span>
+<span class="n">ATIME</span> <span class="o">=</span> <span class="mi">7</span> <span class="c"># stat.ST_ATIME</span>
+<span class="n">MTIME</span> <span class="o">=</span> <span class="mi">8</span> <span class="c"># stat.ST_MTIME</span>
+<span class="n">CTIME</span> <span class="o">=</span> <span class="mi">9</span> <span class="c"># stat.ST_CTIME</span>
 </pre></div>
 </div>
+</div>
+<div class="section" id="access-constants">
+<h3>Access constants:<a class="headerlink" href="#access-constants" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">EXIST</span>      <span class="o">=</span> <span class="mi">0</span> <span class="c"># os.F_OK</span>
+<span class="n">EXECUTABLE</span> <span class="o">=</span> <span class="mi">1</span> <span class="c"># os.X_OK</span>
+<span class="n">WRITABLE</span>   <span class="o">=</span> <span class="mi">2</span> <span class="c"># os.W_OK</span>
+<span class="n">READABLE</span>   <span class="o">=</span> <span class="mi">4</span> <span class="c"># os.R_OK</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="separators-constants">
+<h3>Separators constants:<a class="headerlink" href="#separators-constants" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">CURDIR</span>  <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">curdir</span>
+<span class="n">PARDIR</span>  <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">pardir</span>
+<span class="n">PATHSEP</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">pathsep</span>
+<span class="n">DIRSEP</span>  <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">sep</span>
+<span class="n">EXTSEP</span>  <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">extsep</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-functions">
+<h3>General functions:<a class="headerlink" href="#general-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">cwd</span> <span class="c"># return current working directory.</span>
+<span class="n">chd</span> <span class="c"># change current working directory.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="properties-as-functions">
+<h3>Properties as functions:<a class="headerlink" href="#properties-as-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">size</span>  <span class="c"># return size.</span>
+<span class="n">atime</span> <span class="c"># return access time.</span>
+<span class="n">mtime</span> <span class="c"># return modified time.</span>
+<span class="n">ctime</span> <span class="c"># return creation time.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="path-components-as-functions">
+<h3>Path Components as functions:<a class="headerlink" href="#path-components-as-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">full</span>     <span class="c"># Full path (Absolute path)</span>
+<span class="c">#path    # Given path</span>
+<span class="n">drive</span>    <span class="c"># Drive part</span>
+<span class="nb">dir</span>      <span class="c"># Path without filename</span>
+<span class="n">filedir</span>  <span class="c"># File parent dir</span>
+<span class="nb">file</span>     <span class="c"># Name with extension</span>
+<span class="n">name</span>     <span class="c"># Name without extension</span>
+<span class="n">ext</span>      <span class="c"># Extension</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="general-path-functions">
+<h3>General path functions:<a class="headerlink" href="#general-path-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">join</span>   <span class="c"># join two or more paths.</span>
+<span class="n">stat</span>   <span class="c"># return properties.</span>
+<span class="nb">list</span>   <span class="c"># list contents of path.</span>
+<span class="n">dirs</span>   <span class="c"># list dirs.</span>
+<span class="n">files</span>  <span class="c"># list files.</span>
+<span class="n">chprop</span> <span class="c"># change properties of a path.</span>
+<span class="n">walk</span>   <span class="c"># walk path.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conditional-path-functions">
+<h3>Conditional path functions:<a class="headerlink" href="#conditional-path-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ispath</span>  <span class="c"># check path permission.</span>
+<span class="n">isdir</span>   <span class="c"># check if path is a dir.</span>
+<span class="n">isfile</span>  <span class="c"># check if path is a file.</span>
+<span class="n">islink</span>  <span class="c"># check if path is a link.</span>
+<span class="n">ismount</span> <span class="c"># check if path is a mount.</span>
+<span class="n">isempty</span> <span class="c"># check weather the dir or file is empty.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="high-level-path-functions">
+<h3>High Level path functions:<a class="headerlink" href="#high-level-path-functions" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">move</span>   <span class="c"># move path.</span>
+<span class="n">rename</span> <span class="c"># rename path.</span>
+<span class="n">copy</span>   <span class="c"># copy path.</span>
+<span class="n">create</span> <span class="c"># create path.</span>
+<span class="n">delete</span> <span class="c"># delete path.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
