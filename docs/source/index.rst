@@ -67,11 +67,3 @@ Give us a star.
    :titlesonly:
 
    API <api>
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
