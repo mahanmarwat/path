@@ -10,7 +10,7 @@ All operations are available at module level as functions.
     >>> path.chd() # change current working directory.
     ...
     
-Operations are available as ``Path`` object methods too.
+Operations are available as `Path` object methods too.
 
     >>> p = path.Path('c:\\hello\world.py')
     >>> p.name
@@ -61,17 +61,3 @@ Contribute
 ----------
 
 Give us a star.
-
-.. toctree::
-   :maxdepth: 2
-   :titlesonly:
-
-   API <api>
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
