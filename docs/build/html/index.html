@@ -29,7 +29,7 @@
 
   
     <link rel="top" title="Path 0.1 documentation" href="#"/>
-        <link rel="next" title="API" href="api.html"/> 
+        <link rel="next" title="Path: Path for Pretty People" href="README.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -59,6 +59,9 @@
         
         
             <ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Overview</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul class="simple">
 </ul>
 </li>
@@ -100,64 +103,31 @@
 <h1>Path: Path for Pretty People<a class="headerlink" href="#path-path-for-pretty-people" title="Permalink to this headline">¶</a></h1>
 <a class="reference external image-reference" href="https://readthedocs.org/projects/path/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/path/badge/?version=latest" /></a>
 <p>Path provide highly <strong>readable</strong> API to access and manipulate both filesystem path and URL path.</p>
-<p>All operations are available at module level as functions.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">path</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span><span class="o">.</span><span class="n">cwd</span><span class="p">()</span> <span class="c"># return current working directory.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span><span class="o">.</span><span class="n">chd</span><span class="p">()</span> <span class="c"># change current working directory.</span>
-<span class="gp">...</span>
-</pre></div>
-</div>
-<p>Operations are available as <tt class="docutils literal"><span class="pre">Path</span></tt> object methods too.</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="s">&#39;c:</span><span class="se">\\</span><span class="s">hello\world.py&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span>
 <span class="go">&#39;world&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">ext</span>
 <span class="go">&#39;.py&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">ispath</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">EXIST</span><span class="p">)</span> <span class="c"># check path or file existence.</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">isempty</span><span class="p">()</span> <span class="c"># whether the file or dir is empty.</span>
-<span class="gp">...</span>
-</pre></div>
-</div>
-<p>Individual classes for readability.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">comp</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">Components</span><span class="p">(</span><span class="s">&#39;c:</span><span class="se">\\</span><span class="s">hello\world.py&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">comp</span><span class="o">.</span><span class="n">name</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">HttpPath</span><span class="p">(</span><span class="s">&#39;https://github.com/docopt/docopt&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">path</span>
+<span class="go">&#39;/docopt/docopt&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">name</span>
 <span class="go">&#39;world&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">comp</span><span class="o">.</span><span class="n">ext</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">ext</span>
 <span class="go">&#39;.py&#39;</span>
 </pre></div>
 </div>
-<p>Unlike other packages, path also work on <strong>URL</strong> too. Which ease web-scrapper coding.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">HttpPath</span><span class="p">(</span><span class="s">&#39;https://github.com/docopt/docopt&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">path</span>
-<span class="go">&#39;/docopt/docopt&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">create</span><span class="p">()</span> <span class="c"># will create dir or file according to args.</span>
-<span class="gp">...</span>
-</pre></div>
-</div>
-<div class="section" id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li>Work both on path and URL</li>
-<li>Highly readable API</li>
-<li>Provide constants</li>
-<li>Operations are available as functions and methods</li>
-<li>Individual classes for everything</li>
-</ul>
-</div>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div>$ pip install <a class="reference external" href="https://github.com/mahanmarwat/path/archive/master.zip">https://github.com/mahanmarwat/path/archive/master.zip</a></div></blockquote>
-</div>
-<div class="section" id="documentation">
-<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://path.readthedocs.org">http://path.readthedocs.org</a></p>
-<p>Check <tt class="docutils literal"><span class="pre">path.py</span></tt> which is self explanatory.</p>
-</div>
-<div class="section" id="contribute">
-<h2>Contribute<a class="headerlink" href="#contribute" title="Permalink to this headline">¶</a></h2>
-<p>Give us a star.</p>
+<div class="section" id="contents">
+<h2>Contents:<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README.html">Overview</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul class="simple">
+</ul>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -168,7 +138,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="api.html" class="btn btn-neutral float-right" title="API">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="README.html" class="btn btn-neutral float-right" title="Path: Path for Pretty People">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
