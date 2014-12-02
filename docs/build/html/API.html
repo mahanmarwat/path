@@ -29,7 +29,7 @@
 
   
     <link rel="top" title="Path 0.1 documentation" href="index.html"/>
-        <link rel="prev" title="Path: Path for Pretty People" href="index.html"/> 
+        <link rel="prev" title="Path: Path for Pretty People" href="README.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -59,6 +59,9 @@
         
         
             <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">Overview</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="">API</a><ul class="simple">
 </ul>
 </li>
@@ -111,6 +114,7 @@
 </div>
 <div class="section" id="access-constants">
 <h3>Access constants:<a class="headerlink" href="#access-constants" title="Permalink to this headline">¶</a></h3>
+<p>These can be used with the <tt class="docutils literal"><span class="pre">ispath</span></tt> function. i.e <tt class="docutils literal"><span class="pre">ispath(EXIST)</span></tt></p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">EXIST</span>      <span class="o">=</span> <span class="mi">0</span> <span class="c"># os.F_OK</span>
 <span class="n">EXECUTABLE</span> <span class="o">=</span> <span class="mi">1</span> <span class="c"># os.X_OK</span>
 <span class="n">WRITABLE</span>   <span class="o">=</span> <span class="mi">2</span> <span class="c"># os.W_OK</span>
@@ -133,69 +137,499 @@
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="general-functions">
 <h3>General functions:<a class="headerlink" href="#general-functions" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">cwd</span> <span class="c"># return current working directory.</span>
-<span class="n">chd</span> <span class="c"># change current working directory.</span>
-</pre></div>
-</div>
+<dl class="function">
+<dt id="cwd">
+<tt class="descname">cwd</tt><big>(</big><big>)</big><a class="headerlink" href="#cwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>return current working directory.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="chd">
+<tt class="descname">chd</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#chd" title="Permalink to this definition">¶</a></dt>
+<dd><p>change current working directory.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="properties-as-functions">
 <h3>Properties as functions:<a class="headerlink" href="#properties-as-functions" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">size</span>  <span class="c"># return size.</span>
-<span class="n">atime</span> <span class="c"># return access time.</span>
-<span class="n">mtime</span> <span class="c"># return modified time.</span>
-<span class="n">ctime</span> <span class="c"># return creation time.</span>
-</pre></div>
-</div>
+<dl class="function">
+<dt id="size">
+<tt class="descname">size</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#size" title="Permalink to this definition">¶</a></dt>
+<dd><p>return size.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="atime">
+<tt class="descname">atime</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#atime" title="Permalink to this definition">¶</a></dt>
+<dd><p>return access time.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="mtime">
+<tt class="descname">mtime</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#mtime" title="Permalink to this definition">¶</a></dt>
+<dd><p>return modified time.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ctime">
+<tt class="descname">ctime</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#ctime" title="Permalink to this definition">¶</a></dt>
+<dd><p>return creation time.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="path-components-as-functions">
 <h3>Path Components as functions:<a class="headerlink" href="#path-components-as-functions" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">full</span>     <span class="c"># Full path (Absolute path)</span>
-<span class="c">#path    # Given path</span>
-<span class="n">drive</span>    <span class="c"># Drive part</span>
-<span class="nb">dir</span>      <span class="c"># Path without filename</span>
-<span class="n">filedir</span>  <span class="c"># File parent dir</span>
-<span class="nb">file</span>     <span class="c"># Name with extension</span>
-<span class="n">name</span>     <span class="c"># Name without extension</span>
-<span class="n">ext</span>      <span class="c"># Extension</span>
-</pre></div>
-</div>
+<dl class="function">
+<dt id="full">
+<tt class="descname">full</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#full" title="Permalink to this definition">¶</a></dt>
+<dd><p>return full path (Absolute path).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="path">
+<tt class="descname">path</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#path" title="Permalink to this definition">¶</a></dt>
+<dd><p>return given path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="drive">
+<tt class="descname">drive</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#drive" title="Permalink to this definition">¶</a></dt>
+<dd><p>return drive part.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dir">
+<tt class="descname">dir</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>return path without filename.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="filedir">
+<tt class="descname">filedir</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#filedir" title="Permalink to this definition">¶</a></dt>
+<dd><p>return file dir.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="file">
+<tt class="descname">file</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#file" title="Permalink to this definition">¶</a></dt>
+<dd><p>return name with extension.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="name">
+<tt class="descname">name</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#name" title="Permalink to this definition">¶</a></dt>
+<dd><p>return name without extension.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ext">
+<tt class="descname">ext</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#ext" title="Permalink to this definition">¶</a></dt>
+<dd><p>return extension.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="general-path-functions">
 <h3>General path functions:<a class="headerlink" href="#general-path-functions" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">join</span>   <span class="c"># join two or more paths.</span>
-<span class="n">stat</span>   <span class="c"># return properties.</span>
-<span class="nb">list</span>   <span class="c"># list contents of path.</span>
-<span class="n">dirs</span>   <span class="c"># list dirs.</span>
-<span class="n">files</span>  <span class="c"># list files.</span>
-<span class="n">chprop</span> <span class="c"># change properties of a path.</span>
-<span class="n">walk</span>   <span class="c"># walk path.</span>
-</pre></div>
+<dl class="function">
+<dt id="join">
+<tt class="descname">join</tt><big>(</big><em>path</em>, <em>path</em><span class="optional">[</span>, <em>path</em>, <em>...</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#join" title="Permalink to this definition">¶</a></dt>
+<dd><p>join two or more paths.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="stat">
+<tt class="descname">stat</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#stat" title="Permalink to this definition">¶</a></dt>
+<dd><p>return properties.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="list">
+<tt class="descname">list</tt><big>(</big><em>path</em>, <em>pattern=''</em><big>)</big><a class="headerlink" href="#list" title="Permalink to this definition">¶</a></dt>
+<dd><p>list contents of path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="dirs">
+<tt class="descname">dirs</tt><big>(</big><em>path</em>, <em>pattern=''</em><big>)</big><a class="headerlink" href="#dirs" title="Permalink to this definition">¶</a></dt>
+<dd><p>list dirs.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="files">
+<tt class="descname">files</tt><big>(</big><em>path</em>, <em>pattern=''</em><big>)</big><a class="headerlink" href="#files" title="Permalink to this definition">¶</a></dt>
+<dd><p>list files.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="chprop">
+<tt class="descname">chprop</tt><big>(</big><em>path</em>, <em>mode=None</em>, <em>times=None</em><big>)</big><a class="headerlink" href="#chprop" title="Permalink to this definition">¶</a></dt>
+<dd><p>change properties of a path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="walk">
+<tt class="descname">walk</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#walk" title="Permalink to this definition">¶</a></dt>
+<dd><p>walk path.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This function is not yet implemented.</p>
 </div>
+</dd></dl>
+
 </div>
 <div class="section" id="conditional-path-functions">
 <h3>Conditional path functions:<a class="headerlink" href="#conditional-path-functions" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">ispath</span>  <span class="c"># check path permission.</span>
-<span class="n">isdir</span>   <span class="c"># check if path is a dir.</span>
-<span class="n">isfile</span>  <span class="c"># check if path is a file.</span>
-<span class="n">islink</span>  <span class="c"># check if path is a link.</span>
-<span class="n">ismount</span> <span class="c"># check if path is a mount.</span>
-<span class="n">isempty</span> <span class="c"># check weather the dir or file is empty.</span>
-</pre></div>
-</div>
+<dl class="function">
+<dt id="ispath">
+<tt class="descname">ispath</tt><big>(</big><em>path</em>, <em>access</em><big>)</big><a class="headerlink" href="#ispath" title="Permalink to this definition">¶</a></dt>
+<dd><p>check path permission.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="isdir">
+<tt class="descname">isdir</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#isdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if path is a dir.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="isfile">
+<tt class="descname">isfile</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#isfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if path is a file.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="islink">
+<tt class="descname">islink</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#islink" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if path is a link.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="ismount">
+<tt class="descname">ismount</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#ismount" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if path is a mount.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="isempty">
+<tt class="descname">isempty</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#isempty" title="Permalink to this definition">¶</a></dt>
+<dd><p>check weather the dir or file is empty.</p>
+</dd></dl>
+
 </div>
 <div class="section" id="high-level-path-functions">
 <h3>High Level path functions:<a class="headerlink" href="#high-level-path-functions" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">move</span>   <span class="c"># move path.</span>
-<span class="n">rename</span> <span class="c"># rename path.</span>
-<span class="n">copy</span>   <span class="c"># copy path.</span>
-<span class="n">create</span> <span class="c"># create path.</span>
-<span class="n">delete</span> <span class="c"># delete path.</span>
-</pre></div>
+<dl class="function">
+<dt id="move">
+<tt class="descname">move</tt><big>(</big><em>oldpath</em>, <em>newpath</em><big>)</big><a class="headerlink" href="#move" title="Permalink to this definition">¶</a></dt>
+<dd><p>move path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="rename">
+<tt class="descname">rename</tt><big>(</big><em>oldpath</em>, <em>newpath</em><big>)</big><a class="headerlink" href="#rename" title="Permalink to this definition">¶</a></dt>
+<dd><p>rename path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="copy">
+<tt class="descname">copy</tt><big>(</big><em>oldpath</em>, <em>newpath</em><big>)</big><a class="headerlink" href="#copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>copy path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="create">
+<tt class="descname">create</tt><big>(</big><em>path</em>, <em>type='dir'</em>, <em>mode=0o777</em><big>)</big><a class="headerlink" href="#create" title="Permalink to this definition">¶</a></dt>
+<dd><p>create path.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="delete">
+<tt class="descname">delete</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete path.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This function will delete the file or dir, weather it is empty or not.</p>
 </div>
+</dd></dl>
+
 </div>
 </div>
 <div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="Properties">
+<em class="property">class </em><tt class="descname">Properties</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#Properties" title="Permalink to this definition">¶</a></dt>
+<dd><p>Properties of a path.</p>
+<dl class="attribute">
+<dt id="Properties.size">
+<tt class="descname">size</tt><a class="headerlink" href="#Properties.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Properties.atime">
+<tt class="descname">atime</tt><a class="headerlink" href="#Properties.atime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Properties.mtime">
+<tt class="descname">mtime</tt><a class="headerlink" href="#Properties.mtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Properties.ctime">
+<tt class="descname">ctime</tt><a class="headerlink" href="#Properties.ctime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Components">
+<em class="property">class </em><tt class="descname">Components</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#Components" title="Permalink to this definition">¶</a></dt>
+<dd><p>Components of a path.</p>
+<dl class="attribute">
+<dt id="Components.full">
+<tt class="descname">full</tt><a class="headerlink" href="#Components.full" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Components.path">
+<tt class="descname">path</tt><a class="headerlink" href="#Components.path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Components.drive">
+<tt class="descname">drive</tt><a class="headerlink" href="#Components.drive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Components.dir">
+<tt class="descname">dir</tt><a class="headerlink" href="#Components.dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Components.filedir">
+<tt class="descname">filedir</tt><a class="headerlink" href="#Components.filedir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Components.file">
+<tt class="descname">file</tt><a class="headerlink" href="#Components.file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Components.name">
+<tt class="descname">name</tt><a class="headerlink" href="#Components.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Components.ext">
+<tt class="descname">ext</tt><a class="headerlink" href="#Components.ext" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Path">
+<em class="property">class </em><tt class="descname">Path</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#Path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path object, represent a path to OS file or dir.</p>
+<p>Path Components:</p>
+<dl class="attribute">
+<dt id="Path.full">
+<tt class="descname">full</tt><a class="headerlink" href="#Path.full" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.path">
+<tt class="descname">path</tt><a class="headerlink" href="#Path.path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.drive">
+<tt class="descname">drive</tt><a class="headerlink" href="#Path.drive" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.dir">
+<tt class="descname">dir</tt><a class="headerlink" href="#Path.dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.filedir">
+<tt class="descname">filedir</tt><a class="headerlink" href="#Path.filedir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.file">
+<tt class="descname">file</tt><a class="headerlink" href="#Path.file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.name">
+<tt class="descname">name</tt><a class="headerlink" href="#Path.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.ext">
+<tt class="descname">ext</tt><a class="headerlink" href="#Path.ext" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Path Properties:</p>
+<dl class="attribute">
+<dt id="Path.size">
+<tt class="descname">size</tt><a class="headerlink" href="#Path.size" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.atime">
+<tt class="descname">atime</tt><a class="headerlink" href="#Path.atime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.mtime">
+<tt class="descname">mtime</tt><a class="headerlink" href="#Path.mtime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="Path.ctime">
+<tt class="descname">ctime</tt><a class="headerlink" href="#Path.ctime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>General path methods:</p>
+<dl class="method">
+<dt id="Path.join">
+<tt class="descname">join</tt><big>(</big><em>path</em><span class="optional">[</span>, <em>path</em>, <em>...</em><span class="optional">]</span><big>)</big><a class="headerlink" href="#Path.join" title="Permalink to this definition">¶</a></dt>
+<dd><p>join two or more paths.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.stat">
+<tt class="descname">stat</tt><big>(</big><big>)</big><a class="headerlink" href="#Path.stat" title="Permalink to this definition">¶</a></dt>
+<dd><p>return properties.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.list">
+<tt class="descname">list</tt><big>(</big><em>pattern=''</em><big>)</big><a class="headerlink" href="#Path.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>list contents of path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.dirs">
+<tt class="descname">dirs</tt><big>(</big><em>pattern=''</em><big>)</big><a class="headerlink" href="#Path.dirs" title="Permalink to this definition">¶</a></dt>
+<dd><p>list dirs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.files">
+<tt class="descname">files</tt><big>(</big><em>pattern=''</em><big>)</big><a class="headerlink" href="#Path.files" title="Permalink to this definition">¶</a></dt>
+<dd><p>list files.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.chprop">
+<tt class="descname">chprop</tt><big>(</big><em>mode=None</em>, <em>times=None</em><big>)</big><a class="headerlink" href="#Path.chprop" title="Permalink to this definition">¶</a></dt>
+<dd><p>change properties of a path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.walk">
+<tt class="descname">walk</tt><big>(</big><big>)</big><a class="headerlink" href="#Path.walk" title="Permalink to this definition">¶</a></dt>
+<dd><p>walk path.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method is not yet implemented.</p>
+</div>
+</dd></dl>
+
+<p>Conditional path methods:</p>
+<dl class="method">
+<dt id="Path.ispath">
+<tt class="descname">ispath</tt><big>(</big><em>access</em><big>)</big><a class="headerlink" href="#Path.ispath" title="Permalink to this definition">¶</a></dt>
+<dd><p>check path permission.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.isdir">
+<tt class="descname">isdir</tt><big>(</big><big>)</big><a class="headerlink" href="#Path.isdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if path is a dir.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.isfile">
+<tt class="descname">isfile</tt><big>(</big><big>)</big><a class="headerlink" href="#Path.isfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if path is a file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.islink">
+<tt class="descname">islink</tt><big>(</big><big>)</big><a class="headerlink" href="#Path.islink" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if path is a link.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.ismount">
+<tt class="descname">ismount</tt><big>(</big><big>)</big><a class="headerlink" href="#Path.ismount" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if path is a mount.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.isempty">
+<tt class="descname">isempty</tt><big>(</big><big>)</big><a class="headerlink" href="#Path.isempty" title="Permalink to this definition">¶</a></dt>
+<dd><p>check weather the dir or file is empty.</p>
+</dd></dl>
+
+<p>High Level path methods:</p>
+<dl class="method">
+<dt id="Path.move">
+<tt class="descname">move</tt><big>(</big><em>newpath</em><big>)</big><a class="headerlink" href="#Path.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>move path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.rename">
+<tt class="descname">rename</tt><big>(</big><em>newpath</em><big>)</big><a class="headerlink" href="#Path.rename" title="Permalink to this definition">¶</a></dt>
+<dd><p>rename path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.copy">
+<tt class="descname">copy</tt><big>(</big><em>newpath</em><big>)</big><a class="headerlink" href="#Path.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>copy path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.create">
+<tt class="descname">create</tt><big>(</big><em>type='dir'</em>, <em>mode=0o777</em><big>)</big><a class="headerlink" href="#Path.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>create path.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Path.delete">
+<tt class="descname">delete</tt><big>(</big><big>)</big><a class="headerlink" href="#Path.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete path.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">This method will delete the file or dir, weather it is empty or not.</p>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="HttpPath">
+<em class="property">class </em><tt class="descname">HttpPath</tt><big>(</big><em>path</em><big>)</big><a class="headerlink" href="#HttpPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path object, represent a path to URL.</p>
+<p>Subclass of <tt class="docutils literal"><span class="pre">Path</span></tt>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions:<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="PathError">
+<em class="property">exception </em><tt class="descname">PathError</tt><a class="headerlink" href="#PathError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 
@@ -206,7 +640,7 @@
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
       
-        <a href="index.html" class="btn btn-neutral" title="Path: Path for Pretty People"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="README.html" class="btn btn-neutral" title="Path: Path for Pretty People"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
