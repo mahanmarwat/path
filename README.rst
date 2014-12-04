@@ -63,6 +63,11 @@ http://path.readthedocs.org
 
 Check ``path.py`` which is self explanatory.
 
+I am not pretty, can I still use it?
+------------------------------------
+
+Sorry No, LOL! Yes you can.
+
 Contribute
 ----------
 
